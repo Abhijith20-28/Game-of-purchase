@@ -1,11 +1,17 @@
-import React,{useState} from 'react';
+import React,{useState,useEffect} from 'react';
 import HomePage from './pages/HomePage.jsx';
 import { BrowserRouter as Router,Routes,Route } from 'react-router-dom';
 import Cart from './pages/Cart.jsx';
 import Orders from './pages/Orders.jsx';
 function App(){
- const[cart,setCart]=useState([]);
-
+ const[cart,setCart]=useState(()=>{
+  const savedCart = localStorage.getItem('cart-storage');
+  return savedCart ? JSON.parse(savedCart):[];
+ });
+ useEffect(()=>{
+     localStorage.setItem('cart-storage',JSON.stringify(cart))
+ },[cart]);
+ 
 function handleAddToCart(product,quantity)
 {
   setCart(prevCart =>{
