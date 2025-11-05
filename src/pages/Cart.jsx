@@ -1,5 +1,6 @@
 import React from "react";
 import "../Styles/Cart.css";
+import dayjs from 'dayjs';
 import { Link } from "react-router-dom";
 function Cart({cartItems,onRemoveFromCart}){
   const totalPrice = cartItems.reduce(
@@ -23,7 +24,7 @@ function Cart({cartItems,onRemoveFromCart}){
          <div className="cart-item-name">{item.name} </div>
          <div>Quantity = {item.quantity}</div>
          <div className="cart-item-price">TOTAL = ₹{item.price * item.quantity}   </div>
-         <div className="delivery-date">{item.deliveryDate}</div>
+         <div className="delivery-date">Estimated Delivery:{" "} {dayjs().add(5,"day").format("dddd,MMM D,YYYY")}</div>
          <button className="delete-button" onClick={()=>onRemoveFromCart(item.id)}>Delete</button>
       </div>
      </div>  

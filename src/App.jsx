@@ -11,7 +11,7 @@ function App(){
  useEffect(()=>{
      localStorage.setItem('cart-storage',JSON.stringify(cart))
  },[cart]);
- 
+
 function handleAddToCart(product,quantity)
 {
   setCart(prevCart =>{
