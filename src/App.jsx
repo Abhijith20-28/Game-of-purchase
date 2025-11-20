@@ -39,7 +39,6 @@ function handleRemoveFromCart(productId)
         <Route path="/" element={<HomePage cartItems={cart} onAddToCart={handleAddToCart} />} />
         <Route path="/cart" element={<Cart cartItems={cart} onRemoveFromCart={handleRemoveFromCart} />} />
         <Route path='/Orders' element={<Orders/>}/>
-
      </Routes>
     </Router> 
   
