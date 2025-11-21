@@ -1,4 +1,4 @@
-import "../Styles/App.css"
+import "../Styles/App.css";
 import products from '../data/products';
 import ProductCard from '../Components/ProductCard';
 import React from 'react';
