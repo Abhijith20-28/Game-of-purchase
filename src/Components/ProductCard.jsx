@@ -1,5 +1,5 @@
 import React,{useState} from "react";
-import "../styles/App.css";
+import "../Styles/App.css";
 import { Link } from "react-router-dom";
 export function ProductCard({product,onAddToCart})
 {
