@@ -106,8 +106,8 @@
   background: linear-gradient(135deg, #006aff, #0057d9);
   box-shadow: 0 4px 10px rgba(0, 91, 255, 0.3);
 }
-@media(max-width:575px){
-   .form-group{
-    flex-wrap: nowrap;
-   }
+@media(max-width:450px){
+  .form-row{
+    flex-wrap: wrap;
+  }
 }
