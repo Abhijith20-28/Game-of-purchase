@@ -7,6 +7,7 @@ function Cart({cartItems,onRemoveFromCart}){
     (total, item) => total + item.price * item.quantity,
     0
   );
+  console.log(cartItems);
  return(
   <div className="cart-main">
        <div className="checkout-header">
@@ -50,9 +51,11 @@ function Cart({cartItems,onRemoveFromCart}){
          </div>
 
         <div className="order-placement">
-         <Link to="/orders">
+
+          {cartItems.length===0?<p>Your cart empty</p>:<Link to="/orders">
            <button className="order-button">Place order</button>
-         </Link>
+         </Link>}
+        
         </div>
        </div>
       </div>

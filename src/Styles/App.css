@@ -87,7 +87,7 @@ body {
     grid-template-columns: repeat(2, 1fr);
   }
    .cart-pic{
-    margin-left: 5px;
+    margin-right: 5px;
   }
 }
 

@@ -55,7 +55,7 @@ function Orders() {
               placeholder="e.g., Kerala"
             />
           </div>
-
+          
           <div className="form-group half">
             <label>Pin Code</label>
             <input

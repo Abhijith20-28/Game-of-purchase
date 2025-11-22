@@ -15,8 +15,6 @@
   margin-bottom: 25px;
   font-weight: 600;
 }
-
-
 .order-form {
   display: flex;
   flex-direction: column;
@@ -92,7 +90,6 @@
   border-color: #4b8bff;
 }
 
-
 .submit-btn {
   background: linear-gradient(135deg, #4b8bff, #007bff);
   color: white;
@@ -104,9 +101,13 @@
   transition: all 0.3s ease;
   font-weight: 500;
 }
-
 .submit-btn:hover {
   transform: translateY(-2px);
   background: linear-gradient(135deg, #006aff, #0057d9);
   box-shadow: 0 4px 10px rgba(0, 91, 255, 0.3);
+}
+@media(max-width:575px){
+   .form-group{
+    flex-wrap: nowrap;
+   }
 }
