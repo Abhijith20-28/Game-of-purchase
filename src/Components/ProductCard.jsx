@@ -3,7 +3,7 @@ import "../Styles/App.css";
 import { Link } from "react-router-dom";
 export function ProductCard({product,onAddToCart})
 {
-  const[quantity,setQuantity]=useState(1);
+  const[quantity,setQuantity]=useState(0);
   const handleQuantityChange=(e)=>{
     setQuantity(Number(e.target.value));
   }
@@ -17,7 +17,8 @@ export function ProductCard({product,onAddToCart})
           <div className="product-quantity">
             Quantity:
             <select className="quantity-selector" value={quantity} onChange={handleQuantityChange}>
-               <option selected value="1">1</option>
+              <option value="">Select quantity</option>
+               <option value="1">1</option>
                <option value="2">2</option>
                <option value="3">3</option>
                <option value="4">4</option>
@@ -30,7 +31,9 @@ export function ProductCard({product,onAddToCart})
            </select>
           </div>
           <div className="add-cart-button">
-            <button className="add-to-cart" onClick={()=>onAddToCart(product,quantity)}>Add to cart</button>
+            <button className="add-to-cart" disabled={!quantity} onClick={()=>{onAddToCart(product,Number(quantity));
+                setQuantity("");
+            }}>Add to cart</button>
           </div>
           
           <div className="buy-container">

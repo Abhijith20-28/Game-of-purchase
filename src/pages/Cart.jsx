@@ -7,11 +7,13 @@ function Cart({cartItems,onRemoveFromCart}){
     (total, item) => total + item.price * item.quantity,
     0
   );
-  console.log(cartItems);
+
+   const totalItems = cartItems.reduce((total, item) => total + item.quantity, 0);
+
  return(
   <div className="cart-main">
        <div className="checkout-header">
-          <div>Checkout({cartItems.length})Items</div>
+          <div>Checkout({totalItems})Items</div>
        </div>
     <div className="cart-content">
     <div className="cart-items-section">
