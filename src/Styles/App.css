@@ -170,24 +170,28 @@ body {
   border: none;
   padding: 10px;
   width: 100%;
-  border-radius: 20px;
-  background-color: brown;
-  color: white;
+  border-radius: 10px;
+  border:2px solid rgb(8, 130, 8);
   margin-bottom: 8px;
+  color: rgb(3, 70, 3);
+  font-weight: bold;
+  background-color: white;
+  font-size: 1rem;
 }
 .add-to-cart:hover{
   cursor: pointer;
-  opacity: 0.5;
+  background-color: rgb(8,130,8);
+  color: white;
 }
 .add-to-cart:active{
-  opacity: 0.1;
+  opacity: 0.5;
 }
 .buy-now:hover{
   cursor: pointer;
-  opacity: 0.5;
+  opacity: 0.8;
 }
 .buy-now:active{
-  opacity: 0.1;
+  opacity: 0.5;
 }
 .buy-now
 {

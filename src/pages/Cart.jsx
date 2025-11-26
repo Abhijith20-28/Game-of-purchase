@@ -25,10 +25,10 @@ function Cart({cartItems,onRemoveFromCart}){
        </div>
        <div className="item-details">
          <div className="cart-item-name">{item.name} </div>
-         <div>Quantity = {item.quantity}</div>
-         <div className="cart-item-price">TOTAL = ₹{item.price * item.quantity}   </div>
+         <div className="item-quantity">Quantity = {item.quantity}</div>
+         <div className="cart-item-price">TOTAL ={item.price}*{item.quantity} = ₹{item.price * item.quantity}   </div>
          <div className="delivery-date">Estimated Delivery:{" "} {dayjs().add(5,"day").format("dddd,MMM D,YYYY")}</div>
-         <button className="delete-button" onClick={()=>onRemoveFromCart(item.id)}>Delete</button>
+         <button className="remove-button" onClick={()=>onRemoveFromCart(item.id)}>Delete</button>
       </div>
      </div>  
   ))}
